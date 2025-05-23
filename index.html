@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoorTime | Home</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header>
+    <h1>DuaNest</h1>
+    <nav class="nav-buttons">
+  <button class="nav-btn" id="home-btn" onclick="location.href='index.html'">Home</button>
+<button class="nav-btn" id="duas-btn" onclick="location.href='duas.html'">Duas</button>
+<button class="nav-btn" id="articles-btn" onclick="location.href='articles.html'">Articles</button>
+</nav>
+
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Your Daily Guide to Spiritual Peace</h2>
+      <p>Explore duas, prayer times, Quranic verses, and more based on your life and location.</p>
+      <button onclick="window.location.href='duas.html'">Explore Duas</button>
+    </section>
+
+    <section id="prayer-countdown" class="countdown-section">
+      <h2>🕓 Next Prayer: <span id="nextPrayerName">--</span></h2>
+      <p>Time Remaining: <span id="countdown">--:--:--</span></p>
+    </section>
+
+    <section class="prayer-times">
+      <h3>🕌 Prayer Times in Your Location</h3>
+      <div id="prayer-times-display">Loading prayer times...</div>
+    </section>
+
+    <section class="featured-dua">
+      <h3>🌟 Featured Dua</h3>
+      <blockquote>
+        "اللّهُـمَّ إِنِّي أَسْأَلُكَ العَفْوَ وَالعَافِـيَةَ"
+        <p><em>O Allah, I ask You for forgiveness and well-being.</em></p>
+      </blockquote>
+    </section>
+
+    
+
+    <section class="ayah-section">
+  <h2>📖 Ayah of the Day</h2>
+  <p id="ayah-text"></p>
+  <small id="ayah-ref" style="display:block; margin-top:5px; color:gray;"></small>
+</section>
+
+<section id="tasbeeh-counter" class="tasbeeh-section">
+  <h2 class="tasbeeh-title">🧿 Tasbeeh Beads Counter</h2>
+  <p class="tasbeeh-subtext">Tap the center bead to count your Dhikr</p>
+
+  <div class="tasbeeh-beads">
+    <div class="bead-circle">
+      <span id="tasbeeh-count" class="bead-count">0</span>
+    </div>
+  </div>
+
+  <div class="tasbeeh-controls">
+    <button id="increment-btn" class="bead-btn">Tap</button>
+    <button id="reset-btn" class="reset-btn">Reset</button>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NoorTime. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

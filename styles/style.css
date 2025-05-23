@@ -1,0 +1,425 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f5;
+  color: #2c3e50;
+  line-height: 1.6;
+  padding: 0 1rem;
+}
+
+header {
+  background-color: #11131257;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: #b8f5c5;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+main {
+  padding: 2rem 0;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #e8f5e9;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero button {
+  background-color: #1e2e26;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+  background-color: #355843;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #256d4b;
+}
+
+blockquote {
+  font-style: italic;
+  color: #444;
+  background-color: #f2fdf6;
+  padding: 1rem;
+  border-left: 5px solid #2e7d32;
+  border-radius: 8px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  margin: 3rem 0 1rem;
+}
+/* Ripple container for buttons/links */
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+/* The ripple circle */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  background-color: rgba(255, 255, 255, 0.5);
+  animation: ripple-animation 0.6s linear;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+/* Ramadan floating background container */
+.ramadan-floating {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Crescent/star element */
+.floating-icon {
+  position: absolute;
+  font-size: 20px;
+  opacity: 0.7;
+  animation: floatUp 10s linear infinite;
+  color: #fffde7; /* soft gold */
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+/* Make sure site content is above floating icons */
+header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+body {
+  animation: softGlow 10s ease-in-out infinite alternate;
+}
+
+@keyframes softGlow {
+  0% {
+    background-color: #081c15;
+  }
+  100% {
+    background-color: #0f2c24;
+  }
+}
+.floating-verse {
+  position: fixed;
+  bottom: 10%;
+  left: -50%;
+  width: 100%;
+  color: #fffde7;
+  font-size: 1rem;
+  text-align: center;
+  animation: verseSlide 15s linear forwards;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@keyframes verseSlide {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+.floating-icon {
+  position: absolute;
+  font-size: 1.2rem;
+  color: gold;
+  animation: floatUp 1s ease-out forwards;
+  pointer-events: none;
+  z-index: 999;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px) scale(1.5);
+  }
+}
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.nav-btn {
+  background-color: #0f2c24;
+  color: #fffde7;
+  padding: 0.6rem 1.2rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 150, 136, 0.2);
+}
+
+.nav-btn:hover {
+  background-color: #009688;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.nav-btn.active {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #4caf50;
+}
+.search-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.search-container input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+}
+.tasbeeh-section {
+  text-align: center;
+  background-color: #f6f1e9;
+  padding: 30px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.counter-box {
+  margin-top: 20px;
+}
+
+.count-display {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#increment-btn,
+#reset-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#increment-btn {
+  background-color: #99cc99;
+  color: white;
+}
+
+#reset-btn {
+  background-color: #cc6666;
+  color: white;
+}
+
+#increment-btn:hover {
+  background-color: #88b388;
+}
+
+#reset-btn:hover {
+  background-color: #b94d4d;
+}
+/* Tasbeeh Section */
+.tasbeeh-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #f3f0e7;
+  border-top: 2px solid #b8c2b0;
+  font-family: 'Georgia', serif;
+}
+
+.tasbeeh-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.tasbeeh-subtext {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #7f8c8d;
+}
+
+.tasbeeh-beads {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.bead-circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #d2b48c, #a67c52);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite;
+}
+
+.bead-count {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.tasbeeh-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.bead-btn, .reset-btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: 'Georgia', serif;
+}
+
+.bead-btn {
+  background-color: #6ab04c;
+  color: white;
+}
+
+.bead-btn:hover {
+  background-color: #4e9e34;
+}
+
+.reset-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.reset-btn:hover {
+  background-color: #c0392b;
+}
+.ayah-section, .random-dua-section {
+  background: #f5f5f0;
+  padding: 20px;
+  margin: 20px;
+  border-left: 5px solid #9ac29a;
+  border-radius: 10px;
+  font-family: 'Georgia', serif;
+}
